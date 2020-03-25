@@ -1,0 +1,2494 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20200324024239)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:5
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200324024239"]]
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-24 02:42:49.371823"], ["updated_at", "2020-03-24 02:42:49.371823"]]
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 182.171.231.55 at 2020-03-24 02:43:02 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 182.171.231.55 at 2020-03-24 02:43:17 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 488ms (Views: 476.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 182.171.231.55 at 2020-03-24 02:48:45 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 4166ms (Views: 4148.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 182.171.231.55 at 2020-03-24 02:49:00 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rj9O3WKJB85bsKm8wrLuJhcrxHeCVia/shW1QiNuPHj2RcsPX5pFcVIVaeouM1oky4FEIRVsstAOhAIJS1ESeg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 53ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 182.171.231.55 at 2020-03-24 02:49:49 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 13ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 182.171.231.55 at 2020-03-24 02:49:57 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users_sign_in" for 182.171.231.55 at 2020-03-24 02:50:09 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users_sign_in"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 182.171.231.55 at 2020-03-24 02:50:17 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 257ms (Views: 244.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 182.171.231.55 at 2020-03-24 02:50:20 +0000
+Cannot render console from 182.171.231.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jWx6JCNFrt9II2vvPgDxzFvecY7ZbOkuq8rcUnj0gliTzQ6rZ5UBHSFTflQebfF7cX5kKxfJ8sGPpw6Idz8Cw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jWx6JCNFrt9II2vvPgDxzFvecY7ZbOkuq8rcUnj0gliTzQ6rZ5UBHSFTflQebfF7cX5kKxfJ8sGPpw6Idz8Cw==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 01:49:27 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 27ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20200324024239)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mDROP INDEX "index_users_on_reset_password_token"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mDROP INDEX "index_users_on_email"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200324024239"]]
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:02:22 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20200324024239)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20200324024239_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200324024239"]]
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:02:43 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:02:44 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:03:08 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:03:28 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:03:43 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:03:50 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:06:58 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1608ms (Views: 1607.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:07:15 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2590ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (It's not clear which file to import for '@import "top"'.
+Candidates:
+  top.css
+  top.scss
+Please delete or rename all but one of these files.
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:4
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2188884657844513246_40747880'
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:08:20 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3260ms (Views: 3259.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 02:08:27 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 126ms (Views: 113.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 02:10:00 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 02:10:06 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 70ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddculumnToUser (20200325021241)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar(100) DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20200325021241_addculumn_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "self_introduction" varchar(500)[0m
+  ↳ db/migrate/20200325021241_addculumn_to_user.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "sex" integer DEFAULT 0 NOT NULL[0m
+  ↳ db/migrate/20200325021241_addculumn_to_user.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "img_name" varchar[0m
+  ↳ db/migrate/20200325021241_addculumn_to_user.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200325021241"]]
+  ↳ bin/rails:9
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:20:48 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70062008008000 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 526ms (Views: 514.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:20:59 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70062007902980 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 1006ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (It's not clear which file to import for '@import "users/sign_up"'.
+Candidates:
+  users/sign_up.css
+  users/sign_up.scss
+Please delete or rename all but one of these files.
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:5
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2188884657844513246_70062007933960'
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:21:24 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70062008891420 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 3204ms (Views: 3203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:23:00 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70061999363200 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:24:52 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70062009713620 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 1038ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (It's not clear which file to import for '@import "common"'.
+Candidates:
+  common.css
+  common.scss
+Please delete or rename all but one of these files.
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1">
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:4
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2188884657844513246_70062009730960'
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:25:11 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70062065594460 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 509ms (Views: 508.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:25:49 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70061958072980 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 3127ms (Views: 3125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 02:27:37 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__4162105431873918412_70062068950500 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 133ms (Views: 131.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 09:50:12 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 1783ms (Views: 1749.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 09:50:23 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 3206ms (Views: 3204.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:08:41 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NameError (uninitialized constant User::ImgNameUploader):
+  
+app/models/user.rb:7:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:09:33 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:10:07 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:16:12 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 637ms (Views: 615.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:32:12 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___30502731887714511_61612280 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 163ms (Views: 150.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 10:32:33 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LiKef8DysddUUSYoJkesQ1BbWglq7EmlcZuh2FalBt6eWBut/eHzaF305n7KxhhBjPHaX/3W3crNChaTPpoo3A==", "user"=>{"name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"oota"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$GwAbV3a.Kcr2GzmTdsiZQ..gwKxJVI8AOZMyxZF8kqCH8YAi4rC/O"], ["created_at", "2020-03-25 10:32:33.996543"], ["updated_at", "2020-03-25 10:32:33.996543"], ["name", "oota"], ["self_introduction", "oota"], ["sex", 0]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 186ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:32:34 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:32:40 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:32:40 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:32:43 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:32:43 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 10:32:53 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:38:09 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:38:09 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3964ms (Views: 3963.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:38:25 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:38:25 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 90ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:38:38 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:38:38 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:39:35 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:39:35 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:39:47 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:39:47 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:39:50 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_out" for 124.155.90.71 at 2020-03-25 10:40:02 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/sign_out"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1/sign_out" for 124.155.90.71 at 2020-03-25 10:40:16 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/sign_out"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1/show" for 124.155.90.71 at 2020-03-25 10:41:52 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 10:43:22 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (418.8ms)
+Completed 500 Internal Server Error in 444ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag @user.img_name.url(:thumb) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___4053641111474973711_69932436829940'
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:43:32 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:43:34 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:43:35 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:43:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:43:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:43:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:43:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:43:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:43:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:43:38 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:43:38 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:45:26 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 124.155.90.71 at 2020-03-25 10:46:26 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:46:32 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___1535037938506510598_69932439806980 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 52ms (Views: 46.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 10:46:51 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eEc80k8hUxg0D+/WYbMaQuY/ji0g9Bu0gykyXNCWWr/IPbkAcjIRpz2qL4CNMq5AOpUOe7fOj9s/uIUXuKl0vQ==", "user"=>{"name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"gaga"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$FM4lmlNpejnrjINxU1Ksce9xhHDjjGlscj9aoPPjtSw4GMj7WIzkO"], ["created_at", "2020-03-25 10:46:51.307060"], ["updated_at", "2020-03-25 10:46:51.307060"], ["name", "oota"], ["self_introduction", "gaga"], ["sex", 0]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 173ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:46:51 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/show" for 124.155.90.71 at 2020-03-25 10:47:03 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/show"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 10:47:23 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag @user.img_name.url(:thumb) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___4053641111474973711_69932445285960'
+Started GET "/users" for 124.155.90.71 at 2020-03-25 10:48:30 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:48:34 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 124.155.90.71 at 2020-03-25 10:48:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:48:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:48:41 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:48:41 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 10:49:39 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___1535037938506510598_69932453190760 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 10:50:01 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SNt2szBxXwysS8RJIGNM+6MoeeIoi0ilCUqR7VDhD3H4ofNhDWIds6XuBB/M4vj5f4L5tL+x3Mq12yamON4hcw==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007f34d52827b8 @tempfile=#<Tempfile:/tmp/RackMultipart20200325-11209-9rup4v.jpg>, @original_filename="aburukarakotoask7k.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"aburukarakotoask7k.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"oota"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$LlpJhccqPhI1FnHF0pyVZuQvTG3FV0XEHNJYs1jTEJF.e09kMr3E."], ["created_at", "2020-03-25 10:50:01.993190"], ["updated_at", "2020-03-25 10:50:01.993190"], ["name", "oota"], ["self_introduction", "oota"], ["sex", 0], ["img_name", "aburukarakotoask7k.jpg"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 323ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 10:50:02 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 10:50:09 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag @user.img_name.url(:thumb) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___4053641111474973711_69932454663100'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 10:53:44 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag @user.img_name.url(:thumb) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___4053641111474973711_69932451675440'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:01:16 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <!--<%= image_tag @user.img_name.url(:thumb) %>-->
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___4053641111474973711_69932444809900'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:01:26 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:       </div>
+    11:       <div class='userInfo_name'><%= @user.name%></div>
+    12:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+    13:     </div>
+    14:     <% if current_user.id == @user.id %>
+  
+app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___4053641111474973711_69932446973180'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:03:10 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= @user.id %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___4053641111474973711_69932444744880'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:09:28 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:10:01 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= @user.id%>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___4053641111474973711_69932446999340'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200325021241)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200324024239);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-25 11:11:35.570143"], ["updated_at", "2020-03-25 11:11:35.570143"]]
+  ↳ db/schema.rb:13
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200325021241)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200324024239);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-25 11:11:35.642345"], ["updated_at", "2020-03-25 11:11:35.642345"]]
+  ↳ db/schema.rb:13
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-03-25 11:11:35.650860"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:11:52 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= @user.id%>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___4053641111474973711_69932446792940'
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:11:56 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:12:03 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:12:03 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:12:16 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:12:16 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:12:20 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:12:59 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1306907976607312430_70276704444480 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 368ms (Views: 345.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:13:19 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vxdDsfWCqmiEejfl/kYszs6hpYL7WpmfTce7AIuhnEMPbcZjyJHo143f97MSx5jMEgsl1GxgDfDxVgxL456yQQ==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007fd52c139e40 @tempfile=#<Tempfile:/tmp/RackMultipart20200325-13170-13k49b2.jpg>, @original_filename="NNP59500-1-tg1_9999_2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"NNP59500-1-tg1_9999_2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"ggtg"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1306907976607312430_70276709578240 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 414ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:13:40 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aW4vYYEO8HMBP9gfCNax8PoABSEmCub/VN5WMpVtUufZFKqzvB2yzAiaGEnkVwXyJqqFd7EwcpDoT+F5/VJ85Q==", "user"=>{"name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"ggtg"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$7r7HTOAnFpeM.qzYLA6d7ewKkPeaDQ/vgV7ec70img06DkOONLzuG"], ["created_at", "2020-03-25 11:13:40.846310"], ["updated_at", "2020-03-25 11:13:40.846310"], ["name", "oota"], ["self_introduction", "ggtg"], ["sex", 0]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 167ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:13:40 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:13:49 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:13:49 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show" for 124.155.90.71 at 2020-03-25 11:13:49 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <%= @user.id%>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___759875686615471013_70276715272920'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:13:53 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:14:18 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag @user.img_name.url(:thumb) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___759875686615471013_70276715065760'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:15:03 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:15:36 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag(@user.img_name.url(:thumb)) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___759875686615471013_70276716344260'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:16:14 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+     7:     </header>
+     8:     <div class='userInfo'>
+     9:       <div class='userInfo_img'>
+    10:         <%= image_tag @user.img_name.url(:thumb) %>
+    11:       </div>
+    12:       <div class='userInfo_name'><%= @user.name%></div>
+    13:       <div class='userInfo_selfIntroduction'><%= @user.self_introduction %></div>
+  
+app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___759875686615471013_70276719810520'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:16:39 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:17:04 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:17:06 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 124.155.90.71 at 2020-03-25 11:17:13 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 124.155.90.71 at 2020-03-25 11:17:21 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:17:22 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:21:47 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:21:48 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:21:49 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:22:04 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:22:05 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:22:18 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:22:28 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:22:30 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:22:46 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (3.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/sign_up" for 124.155.90.71 at 2020-03-25 11:24:33 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:24:39 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__683853694878912590_69932638176880 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 367ms (Views: 349.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:25:05 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVnWN7un/9qQFObsdaphICOAlQ0jFnr5Bh1Dq3XJMuHVI1PlhrS9ZZmxJrqZK9Ui/yoVW7Qs7pa6jPTgHfYc4w==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007f34e81e9a28 @tempfile=#<Tempfile:/tmp/RackMultipart20200325-13956-aorb5d.jpg>, @original_filename="limi_2016aw_013.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"limi_2016aw_013.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"aaaa"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$hbiJ5QV/fdfILAJzvZVgYuT1scvxH3F41924vjznYxKV7w7r30pfK"], ["created_at", "2020-03-25 11:25:05.637964"], ["updated_at", "2020-03-25 11:25:05.637964"], ["name", "oota"], ["self_introduction", "aaaa"], ["sex", 0], ["img_name", "limi_2016aw_013.jpg"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 293ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:25:05 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:25:14 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+    1: <%= @user.img_name %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___2428361963267243814_69932649839360'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200325021241)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200324024239);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-25 11:25:52.143046"], ["updated_at", "2020-03-25 11:25:52.143046"]]
+  ↳ db/schema.rb:13
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200325021241)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200324024239);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (7.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-25 11:25:52.219287"], ["updated_at", "2020-03-25 11:25:52.219287"]]
+  ↳ db/schema.rb:13
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-03-25 11:25:52.232927"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:26:06 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `img_name' for nil:NilClass):
+    1: <%= @user.img_name %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___161084584585434820_26723340'
+Started GET "/sign_up" for 124.155.90.71 at 2020-03-25 11:26:18 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:26:25 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___2961012325706182365_70027732262040 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 356ms (Views: 339.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:26:39 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LiSh9B4gC7yK9hlyABB49ZJQR147oOiSz+y1rnrX0aKeXiQmIzNJA4NT2STskcz3TvrHCKyafP1zfQLlEuj/oA==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x00007f614416dbe8 @tempfile=#<Tempfile:/tmp/RackMultipart20200325-18263-e2xhqj.jpg>, @original_filename="LIMIfeu_2018aw_028.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"LIMIfeu_2018aw_028.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"oota", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "self_introduction"=>""}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___2961012325706182365_70027735416240 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 178ms (Views: 47.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:26:56 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1R7e0hrkHKxcKYxIXE9UgIZF7vrbWIfKvZrlVFz7vTJlZFsAJ/deE1WMTB6wzuCCWu9urExiE6UBC1IfNMSTMA==", "user"=>{"name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"oota"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$1NrAeOv6WV3ROg6.fc4rfeXjTZctjpooYWFyl9RZlHlg0DtTe3TpS"], ["created_at", "2020-03-25 11:26:56.265806"], ["updated_at", "2020-03-25 11:26:56.265806"], ["name", "oota"], ["self_introduction", "oota"], ["sex", 0]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 170ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:26:56 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200325021241)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200324024239);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-25 11:49:26.170141"], ["updated_at", "2020-03-25 11:49:26.170141"]]
+  ↳ db/schema.rb:13
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar(100) DEFAULT '' NOT NULL, "self_introduction" varchar(500), "sex" integer DEFAULT 0 NOT NULL, "img_name" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200325021241)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200324024239);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-25 11:49:26.243363"], ["updated_at", "2020-03-25 11:49:26.243363"]]
+  ↳ db/schema.rb:13
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-03-25 11:49:26.253460"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for 124.155.90.71 at 2020-03-25 11:49:49 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1719043784029929308_48440060 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 385ms (Views: 363.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:50:07 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KF/21kMG7thr6dGPznGbNDi1mYzW3yvAjK1M+lgO/auYJXMEfhWsZ2JMEdki8C825B8Z2kHlv68wPPuxMDHTqQ==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x0000000006cb31e8 @tempfile=#<Tempfile:/tmp/RackMultipart20200325-19763-1aawa6h.jpg>, @original_filename="NNP59500-1-tg1_9999_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"NNP59500-1-tg1_9999_1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"kkkk"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__1719043784029929308_57825780 at /home/ec2-user/environment/tinder_clone_app/app/views/devise/registrations/new.html.erb:7)
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 395ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 124.155.90.71 at 2020-03-25 11:50:26 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yz2oa1yp+zPue+4AswBy/0phFKcPc4VR7PlnfaHPWBfTRy25Ybq5jOfeLlZfgcb9lsuU8ZhJET5QaNA2yfB2FQ==", "user"=>{"img_name"=>#<ActionDispatch::Http::UploadedFile:0x0000000007651cb8 @tempfile=#<Tempfile:/tmp/RackMultipart20200325-19763-y60k73.jpg>, @original_filename="NNP59500-1-tg1_9999_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[img_name]\"; filename=\"NNP59500-1-tg1_9999_1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"oota", "email"=>"oota@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sex"=>"男", "self_introduction"=>"kkkk"}, "commit"=>"はじめる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oota@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "self_introduction", "sex", "img_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "oota@gmail.com"], ["encrypted_password", "$2a$11$eAfWTqJzOp3VBW7kIQcideKV6cQJni5l04Biq1ypsES2twyEISYO2"], ["created_at", "2020-03-25 11:50:26.646014"], ["updated_at", "2020-03-25 11:50:26.646014"], ["name", "oota"], ["self_introduction", "kkkk"], ["sex", 0], ["img_name", "NNP59500-1-tg1_9999_1.jpg"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://d857e0a5bdbd407db7b1419011b800f1.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 353ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 124.155.90.71 at 2020-03-25 11:50:26 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/1" for 124.155.90.71 at 2020-03-25 11:52:14 +0000
+Cannot render console from 124.155.90.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
